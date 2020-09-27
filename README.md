@@ -1,8 +1,8 @@
 # taskwebsites
 1. Steps to create and initialize the database.
-  - Check out the source code from the repository.  
-  - Run the command to create and start a LocalDb instance: SqlLocalDb create MSSQLLocalDB -s
-  - The database is in a file called  websites.mdf in the root folder. Please change the path to the database file in \TaskWebsites\appsettings.Development.json and \TaskWebsites\appsettings.json to match the local path. Alternatively a new database file can be created with the command: 
+   - Check out the source code from the repository.  
+   - Run the command to create and start a LocalDb instance: SqlLocalDb create MSSQLLocalDB -s
+   - The database is in a file called  websites.mdf in the root folder. Please change the path to the database file in \TaskWebsites\appsettings.Development.json and \TaskWebsites\appsettings.json to match the local path. Alternatively a new database file can be created with the command: 
   sqlcmd -S "(localdb)\MSSQLLocalDB" -Q "CREATE DATABASE websites ON PRIMARY ( NAME=[websites], FILENAME = 'C:\Users\shide\source\repos\TaskWebsites\websites.mdf') LOG ON (NAME=[websites_log], FILENAME = 'C:\Users\shide\source\repos\TaskWebsites\websites_log.ldf');"
   The local paths need to be adjusted. After the database file is created we can run "Update-Database" in the powershell inside Visual Studio to trigger Migrations to create the tables in the database.
 2. Steps to prepare the source code to build/run properly
