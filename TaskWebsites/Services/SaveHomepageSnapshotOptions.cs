@@ -7,8 +7,9 @@ namespace TaskWebsites.Services
 {
     public class SaveHomepageSnapshotOptions
     {
-        public const string CategoryName = "HomepageSnapshotsFolder";
+        public const string SectionName = "HomepageSnapshotsFolder";
 
         public string RelativePath { get; set; }
+        public string RelativeUrlPath { get; set; }
     }
 }

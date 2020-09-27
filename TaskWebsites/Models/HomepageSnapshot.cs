@@ -3,7 +3,9 @@
     public class HomepageSnapshot
     {
         public int Id { get; set; }
-        public string Path { get; set; }
-        public int Name { get; set; }
+        public string PathToFileOnDisk { get; set; }
+        public string UrlPath { get; set; }
+        public string Filename { get; set; }
+        public string FileType{ get; set; }
     }
 }

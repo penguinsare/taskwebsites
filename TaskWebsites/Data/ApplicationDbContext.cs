@@ -11,7 +11,7 @@ using TaskWebsites.Models;
 
 namespace TaskWebsites.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : DbContext
     {
         private readonly DatabaseOptions _configuration;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IOptions<DatabaseOptions> config)
